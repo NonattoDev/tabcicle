@@ -36,7 +36,13 @@ const urls = [
         await driver.sleep(5000);
       }
 
-      await driver.sleep(90000); // Tempo em milissegundos
+      if (url === urls[2]) {
+        await driver.findElement(webdriver.By.css('input[type="text"]')).sendKeys('tw2tecnologia');
+        await driver.findElement(webdriver.By.css('input[type="password"]')).sendKeys('GhT438*$@23v', webdriver.Key.RETURN);
+        await driver.sleep(5000);
+      }
+
+      await driver.sleep(2000); // Tempo em milissegundos
     }
   }
 })();
